@@ -6,7 +6,9 @@ Release:	2
 License:	non-commercial use and distribution
 Group:		Applications/Text
 Source0:	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/hc-30.tar.gz
+# Source0-md5:	e3a0fad6154e1d3f4e8abbb52abf28e1
 Source1:	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/hc-supp.tab
+# Source1-md5:	5b12db3fbe75b4b252a4f588a1d25a58
 Patch0:		hc-make.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
