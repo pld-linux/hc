@@ -1,0 +1,32 @@
+diff -urN hc3/Makefile hc3p/Makefile
+--- hc3/Makefile	Thu Mar 11 15:22:44 1993
++++ hc3p/Makefile	Mon Jan 19 16:52:24 1998
+@@ -1,20 +1,23 @@
+ # Makefile for hc (Hanzi Converter) 3.0
+ 
++BINDIR=/usr/bin
++LIBDIR=/usr/share
++
+ hc:	hc.o hclib.o
+ 	cc -o hc hc.o hclib.o
+ 
+ b2g:
+-	echo "#! /bin/csh" > b2g
+-	echo $(PWD)/hc "-m b2g -t" $(PWD)/hc.tab "$$*" >> b2g
++	echo "#!/bin/sh" > b2g
++	echo $(BINDIR)/hc "-m b2g -t" $(LIBDIR)/chinese/hc.tab "$$*" >> b2g
+ 	chmod a+x b2g
+ 
+ g2b:
+-	echo "#! /bin/csh" > g2b
+-	echo $(PWD)/hc -m g2b -t $(PWD)/hc.tab "$$*" >> g2b
++	echo "#!/bin/sh" > g2b
++	echo $(BINDIR)/hc -m g2b -t $(LIBDIR)/chinese/hc.tab "$$*" >> g2b
+ 	chmod a+x g2b
+ 
+ clean:
+-	rm *.o hc
++	rm *.o hc b2g g2b
+ 
+ tar:
+ 	tar cf - Makefile README hc.1 hclib.h hclib.c hc.c hc.tab > hc-3.0.tar
