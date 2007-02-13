@@ -1,5 +1,5 @@
 Summary:	Hanzi Converter between BIG-5 and GB codes
-Summary(pl.UTF-8):   Konwerter kodowania ideogramów chińskich (Hanzi) w BIG-5 i GB
+Summary(pl.UTF-8):	Konwerter kodowania ideogramów chińskich (Hanzi) w BIG-5 i GB
 Name:		hc
 Version:	3.0
 Release:	2
